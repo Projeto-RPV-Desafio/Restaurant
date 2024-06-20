@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
 
             <div><br /><br />
-                <p id="rights">Todos os direitos reservados | Restaurant Prime</p><br />
+                <p id="rights">Todos os direitos reservados | Restaurante Sabor Divino</p><br />
             </div>
 
         </div>

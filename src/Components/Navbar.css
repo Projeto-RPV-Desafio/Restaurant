@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   padding-top: 80px;
 }
+
 nav {
   display: flex;
   height: 80px;
@@ -22,20 +25,6 @@ nav {
   flex-wrap: wrap;
   z-index: 100;
 }
-/* Existing CSS */
-/* .logoo {
-  position: relative;
-  right: 50px;
-  cursor: pointer;
-} */
-/* .btn-login {
-  font-weight: 500;
-  border: none;
-  background: transparent;
-  color: green;
-  font-size: 18px;
-  cursor: pointer;
-} */
 
 .btn-signup {
   padding: 6px;
@@ -48,18 +37,14 @@ nav {
   position: relative;
   cursor: pointer;
 }
-/* nav .logo {
-  color: #fff;
-  font-size: 140px;
-  display: none;
-  font-weight: 600;
-} */
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 0 !important;
 }
+
 nav ul li {
   margin: 0 5px;
   cursor: pointer;
@@ -78,11 +63,11 @@ nav ul li a {
   border-radius: 5px;
   letter-spacing: 1px;
 }
+
 nav ul li a:hover {
   color: white !important;
 }
 
-/* EFEITO MENU */
 nav ul li .active::before {
   content: "";
   position: absolute;
@@ -99,22 +84,16 @@ nav ul li .active:hover::before {
   width: 0%;
 }
 
-/* MENU */
 nav .menu-btn i {
   color: #ffffff !important;
   font-size: 22px;
   cursor: pointer;
-  display: none;
+  display: none; /* Ícone de menu hambúrguer inicialmente escondido */
 }
 
-/* NOME RESTAURANT */
-input[type="button"] {
-  display: none;
+input[type="checkbox"] {
+  display: none; /* Checkbox escondido */
 }
-
-/* .home {
-  text-decoration: underline;
-} */
 
 .btn-main {
   display: flex;
@@ -128,19 +107,17 @@ input[type="button"] {
 .navbar-brand h1 {
   color: white;
 }
+
 .navbar-brand {
   padding-bottom: 0 !important;
   padding-top: 10px;
 }
-
-/* Modal CSS */
 
 body.active-modal {
   overflow-y: hidden;
   margin-right: 16px;
 }
 
-/* cheked */
 .in {
   position: relative;
   display: block !important;
@@ -151,7 +128,7 @@ body.active-modal {
 
 .modal {
   margin: 20px !important;
-} 
+}
 
 .modal,
 .overlay {
@@ -164,7 +141,7 @@ body.active-modal {
   position: fixed;
   z-index: 10000;
   transition: 1s;
-} 
+}
 
 .overlay {
   background-color: rgb(49, 49, 49, 0.8);
@@ -176,32 +153,17 @@ body.active-modal {
 
 .modal-content {
   position: absolute;
-  height: 65vh;
-  transition: 1s;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background-color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 20px;
-  max-width: 600px;
-  min-width: 300px;
-  z-index: 10000000;
+  width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.modal-content h2 {
-  text-align: center;
-  color: #000000;
-  font-weight: 800;
-  margin-top: 20px;
-}
-.modal-content p {
-  text-align: center;
-  color: #f94242;
-  font-weight: 500;
-  font-size: 12px;
-}
 .modal-content span p {
   bottom: 13px;
   position: relative;
@@ -220,10 +182,12 @@ body.active-modal {
   position: relative;
   top: 40px;
 }
+
 .h1-1 {
   font-size: 35px;
   margin-top: 0 !important;
 }
+
 .p-l-1 {
   color: #f94242 !important;
   font-weight: 900 !important;
@@ -286,25 +250,27 @@ body.active-modal {
   font-weight: 600;
 }
 
-
+/* Estilos para telas menores que 1150px */
 @media (max-width: 1150px) {
   nav {
     padding: 0 40px 0 50px;
   }
+
   .navbar-brand {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
   }
+
   nav ul li a {
     color: #ffffff;
     font-weight: 600;
   }
-}
 
-@media (max-width: 1150px) {
+  /* Esconder itens e exibir ícone de menu hambúrguer */
   .hide {
     display: none;
   }
+
   .show {
     display: inline;
   }
@@ -313,14 +279,7 @@ body.active-modal {
     top: 27px;
     position: absolute;
     right: 6%;
-    display: block;
-  }
-  .logoo {
-    position: relative;
-    right: 0;
-  }
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
+    display: block; /* Exibir ícone de menu hambúrguer */
   }
 
   nav {
@@ -329,6 +288,7 @@ body.active-modal {
     display: flex;
     justify-content: flex-start;
   }
+
   nav ul {
     position: absolute;
     top: 69px;
@@ -341,52 +301,57 @@ body.active-modal {
     transition: all 0.3s ease;
     z-index: 100;
   }
+
+  /* Deslizar o menu para dentro ao clicar no ícone de menu */
   #click:checked ~ ul {
     left: 0;
   }
+
   nav ul li {
     width: 100%;
     margin: 22px 0;
   }
+
   nav ul li {
     margin-left: -100%;
     font-size: 20px;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+
+  /* Animação para os itens do menu */
   #click:checked ~ ul li {
     margin-left: 0px;
   }
+
   nav ul li.active,
   nav ul li:hover {
     background: none;
     color: rgb(0, 0, 0);
   }
-  nav .logo {
-    display: block;
-  }
-  .logo {
-    display: none;
-  }
-  .logo {
-    display: inline-block;
-  }
 }
+
+/* Estilos para telas menores que 744px */
 @media (max-width: 744px) {
   .modal-content span p {
     font-size: 7px;
   }
+
   .btn-pr {
     top: 42px;
     left: 32%;
   }
+
   .inp {
     font-size: 10px;
   }
 }
+
+/* Estilos para telas menores que 430px */
 @media (max-width: 430px) {
   .modal-content span p {
     padding-left: 5px;
   }
+
   .modal {
     margin: auto;
     width: 90%;
