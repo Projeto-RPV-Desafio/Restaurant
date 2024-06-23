@@ -1,0 +1,14 @@
+.imgTeam {
+    object-fit: cover;
+    border: 3.9px solid #fc5a5a;
+    height: 250px;
+    width: 250px;
+}
+
+.text {
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}

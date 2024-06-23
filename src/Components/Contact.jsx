@@ -28,7 +28,7 @@ export default function Contact() {
                     </div>
 
                     <div className="form-group">
-                        <button className="btn" id="mysubmit">Enviar ou Assinar</button>
+                        <button className="btn mt-3" id="mysubmit">Enviar ou Assinar</button>
                     </div>
 
                     <br />
